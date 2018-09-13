@@ -41,10 +41,8 @@ exercises**
     * [Topic 3: Services](#topic-3-services-2-days)
 
     * [Topic 4: SQL - MySql](#topic-4-sql---mysql-2-days)
-
-    * [Topic 5: NoSQL - MongoDB](#topic-5-nosql---mongodb-2-days)
     
-    * [Topic 6: Spring Core & REST](#topic-5-spring-core--rest-3-days)
+    * [Topic 5: Spring Core & REST](#topic-5-spring-core--rest-3-days)
 
 10. [Your First Project Starts Now!](#your-first-project-starts-now)
 
@@ -94,7 +92,7 @@ Developers that move faster than average can go ahead and complete as much exerc
 2. The IDE to use is [Eclipse for Java Developers](http://www.eclipse.org/downloads/). [
 Eclipse IDE for Java EE Developers Recommended](http://www.eclipse.org/downloads/packages/).
 
-3. Slack JavaBootcampTandil account + headset (audio calls)
+3. Slack java-bootcamp-globant account + headset (audio calls)
 
 4. Create your own [GitHub](https://github.com/) account. Follow this [guideline](https://help.github.com/articles/set-up-git) to setup your account. Also you can read further about Git in [Try Git](https://try.github.io/levels/1/challenges/1) or [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 
@@ -106,15 +104,15 @@ Eclipse IDE for Java EE Developers Recommended](http://www.eclipse.org/downloads
 
 ## General Guidelines
 
-The boot camp is organized in the following way:
+The bootcamp is organized in the following way:
 
 1. The first three weeks will be used for intensive self learning. Each topic will have reading and practices parts. Tutors will be available to answer technical questions on a given chat room. 
 
 2. The next week will be used to develop an application following a life process.
 
-3. One boot camp chat will be created for feedback and technical assistance:
+3. This slack account would be use for technical assistance: https://java-bootcamp-globant.slack.com
 
-    Bootcamp JAVA - ALL
+    Bootcamp JAVA - #general
 Every person participating in the bootcamp is present here (students and tutors). Here is the place to ask for technical assistance!
 
 4. [Team play](http://www.dummies.com/how-to/content/ten-qualities-of-an-effective-team-player.html) is encouraged but the work will be evaluated per person.
@@ -217,36 +215,7 @@ Commit your practice code.
 
 → [index](#index)
 
-
-# Topic 2: Test Driven Development (2 days)
-
-## Reading:
-1. [Test Driven Development](http://technologyconversations.com/2013/12/24/test-driven-development-tdd-best-practices-using-java-examples-2/)
-
-## Practice:
-
-1. Use TDD to create the 'Recent file list' behaviour. Some examples of this behaviour is:
-  * When the program is run for the first time, the list is empty.
-  * When a file is opened, it is added to the recent file list.
-  * If an opened file already exists in the recent file list, it is bumped to the top, not duplicated in the list.
-  * If the recent file list gets full (typical number of items is 15), the oldest item is removed when a new item is added.
-2. Using TDD techniques such as mocking, faking and stubs, try to develop your own blog software featuring:
-  * Post new entry
-  * Delete existing entry
-  * Show 10 most recent entries
- 
-## Key Points:
-
-2
-
-## Commit:
-
-Commit your practice code.
-
-→ [index](#index)
-
-
-# Topic 3: Services (2 days)
+# Topic 2: Services (2 days)
 
 ## Reading:
 1. [How to create services in Java](https://web.archive.org/web/20160414080344/http://www.makinggoodsoftware.com/2009/11/17/how-to-create-services-in-java/)
@@ -266,6 +235,27 @@ Note: Do not implement JPA or ORM. Services should return in memory data only.
 ## Key Points:
 
 2,4,7
+
+## Commit:
+
+Commit your practice code.
+
+→ [index](#index)
+
+
+# Topic 3: Test Driven Development (2 days)
+
+## Reading:
+1. JUnit (https://junit.org/junit4/cookbook.html)
+2. [Optional] [Test Driven Development](http://technologyconversations.com/2013/12/24/test-driven-development-tdd-best-practices-using-java-examples-2/)
+
+## Practice:
+
+1. Implements all unit test cases in JUnit for the services methods implemented in the previous topic.
+
+## Key Points:
+
+1
 
 ## Commit:
 
@@ -331,36 +321,7 @@ Commit your practice code.
 
 → [index](#index)
 
-# Topic 5: NoSQL - MongoDB (2 days)
-
-## Reading:
-1. [SQL vs. NoSQL DB](http://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/)
-
-2. [Installing MongoDB](http://docs.mongodb.org/manual/installation)
-
-3. [SQL to MongoDB Mapping Chart](http://docs.mongodb.org/manual/reference/sql-comparison)
-
-4. [Morphia to Map Java objects in MongoDB](https://dzone.com/articles/using-morphia-map-java-objects)
-
-
-## Practice:
-
-1. Using the same SQL-MySql data model, map it to the corresponding database, collections and documents.
-2. Fetch all students whose notes in a specific course were greater than 4.
-3. Fetch all courses ordered by name for a given teacher.
-4. Create a new project using Maven and Morphia to map the objects created in 1. Create the necessary DAOs to get same result than 2.
-
-## Key Points:
-
-1,2,4
-
-## Commit:
-
-Commit your practice code.
-
-→ [index](#index)
-
-# Topic 6: Spring Core & REST (3 days)
+# Topic 5: Spring Core & REST (3 days)
 
 ## Reading:
 1. [Introduction to REST](https://www.youtube.com/watch?v=YCcAE2SCQ6k)
@@ -397,6 +358,8 @@ Create a functional shopping cart (just REST api). The minimum features to be co
   - Save Cart.
   - Buy products.
 
-The solution must use MongoDB or MySql as repository as well as Spring Boot and swagger for REST documentation.
+The solution must use MySql as repository as well as Spring Boot and swagger for REST documentation.
+
+Optional: Implement an endpoint that returns products recomendation taking into accuont previous orders.
 
 Thanks for reading!
