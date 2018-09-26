@@ -2,7 +2,8 @@ package proxy;
 
 public class DatabaseProxy implements DataRequest {
 
-	User registeredUser;
+	private User registeredUser;
+	private Database mysqlDatabase = new Database();
 
 	/*
 	 * When a DatabaseProxy instance is created, it receives the user making the
@@ -20,8 +21,8 @@ public class DatabaseProxy implements DataRequest {
 
 	@Override
 	public String showData(String request) {
+
 		String result;
-		Database mysqlDatabase = new Database();
 		if (request == "Sensitive data" && !registeredUser.hasAccess()) {
 			result = "You don't have the required permissions";
 		} else {
@@ -33,7 +34,6 @@ public class DatabaseProxy implements DataRequest {
 	@Override
 	public String deleteData(String request) {
 		String result;
-		Database mysqlDatabase = new Database();
 		if (!registeredUser.hasAccess()) {
 			result = "You don't have the required permissions";
 		} else {
@@ -46,7 +46,6 @@ public class DatabaseProxy implements DataRequest {
 	@Override
 	public String modifyData(String oldData, String newData) {
 		String result;
-		Database mysqlDatabase = new Database();
 		if (!registeredUser.hasAccess()) {
 			result = "You don't have the required permissions";
 		} else {

@@ -7,7 +7,7 @@ public class MysqlDatabase {
 
 	public MysqlDatabase(String name, String address, String port) {
 		this.setName(name);
-		this.setAdress(address);
+		this.setAddress(address);
 		this.setPort(port);
 	}
 
@@ -27,17 +27,17 @@ public class MysqlDatabase {
 		this.port = port;
 	}
 
-	public String getAdress() {
+	public String getAddress() {
 		return address;
 	}
 
-	public void setAdress(String adress) {
+	public void setAddress(String adress) {
 		this.address = adress;
 	}
 
 	@Override
 	public String toString() {
 		return "Connected to: " + this.getName() + " " + "Port: " + this.getPort() + "  address: "
-				+ this.getAdress();
+				+ this.getAddress();
 	}
 }

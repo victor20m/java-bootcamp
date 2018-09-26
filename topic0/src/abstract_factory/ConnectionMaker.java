@@ -2,13 +2,18 @@ package abstract_factory;
 
 public class ConnectionMaker {
 	public static DatabaseFactory establishConnection(String connect) {
-		switch(connect) {
-			case "mysql":
-				return new MySqlFactory();
-			case "mongodb":
-				return new MongoDBFactory();
-			default:
-				return null;
+		DatabaseFactory db;
+		switch (connect) {
+		case "clients":
+			db = new ClientsFactory();
+			break;
+		case "accounts":
+			db = new AccountsFactory();
+			break;
+		default:
+			db = null;
+			break;
 		}
+		return db;
 	}
 }

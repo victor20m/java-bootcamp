@@ -1,4 +1,5 @@
 package proxy;
+
 public class Demo {
 	public static void main(String[] args) {
 
@@ -17,11 +18,11 @@ public class Demo {
 
 		/*
 		 * Second test: the database proxy now receives an admin user making the same
-		 * requests, but obtaining different results
+		 * requests and modifying data, but obtaining different results
 		 */
-		
+
 		System.out.println("\nSecond Test: \n");
-		
+
 		User adminlUser = new User("Luke", "456", true);
 
 		mysqlDatabase = new DatabaseProxy(adminlUser);
@@ -29,5 +30,8 @@ public class Demo {
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("data1"));
 		System.out.println("Deleting data: \n" + mysqlDatabase.deleteData("data1"));
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("Sensitive data"));
+
+		System.out.println(mysqlDatabase.modifyData("data2", "newupdated"));
+		System.out.println(mysqlDatabase.showData("newupdated"));
 	}
 }
