@@ -13,7 +13,7 @@ public class Demo {
 		DatabaseProxy mysqlDatabase = new DatabaseProxy(normalUser);
 		System.out.println("First Test: \n");
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("data1"));
-		System.out.println("Deleting data: \n" + mysqlDatabase.deleteData("data1"));
+		System.out.println("Deleting data... \n" + mysqlDatabase.deleteData("data1"));
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("Sensitive data"));
 
 		/*
@@ -26,9 +26,9 @@ public class Demo {
 		User adminlUser = new User("Luke", "456", true);
 
 		mysqlDatabase = new DatabaseProxy(adminlUser);
-
+		System.out.println("Deleting data... \n" + mysqlDatabase.deleteData("data1"));
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("data1"));
-		System.out.println("Deleting data: \n" + mysqlDatabase.deleteData("data1"));
+
 		System.out.println("Displaying data: \n" + mysqlDatabase.showData("Sensitive data"));
 
 		System.out.println(mysqlDatabase.modifyData("data2", "newupdated"));

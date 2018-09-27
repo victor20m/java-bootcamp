@@ -3,7 +3,7 @@ package proxy;
 public class DatabaseProxy implements DataRequest {
 
 	private User registeredUser;
-	private Database mysqlDatabase = new Database();
+	private Database mysqlDatabase;
 
 	/*
 	 * When a DatabaseProxy instance is created, it receives the user making the
@@ -11,6 +11,7 @@ public class DatabaseProxy implements DataRequest {
 	 */
 
 	public DatabaseProxy(User userRequesting) {
+		mysqlDatabase = new Database();
 		registeredUser = userRequesting;
 	}
 

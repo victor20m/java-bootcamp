@@ -1,6 +1,6 @@
 package abstract_factory;
 
-public class ClientsMdb implements MongoDBDatabase {
+public class ClientsMdb implements DatabaseInterface {
 
 	@Override
 	public String connectTo() {

@@ -13,3 +13,4 @@
 /ClientsFactory.class
 /MongoFactory.class
 /MysqlFactory.class
+/DatabaseInterface.class

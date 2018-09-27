@@ -3,12 +3,17 @@ package abstract_factory;
 public class AccountsFactory extends DatabaseFactory {
 
 	@Override
-	MysqlDatabase getMysql() {
-		return new AccountsMsql();
-	}
+	DatabaseInterface getConnection(String type) {
+		switch (type) {
+		case "mysql":
+			return new AccountsMsql();
 
-	@Override
-	MongoDBDatabase getMongoDB() {
-		return new AccountsMdb();
+		case "mongodb":
+			return new AccountsMdb();
+
+		default:
+			return null;
+		}
+
 	}
 }

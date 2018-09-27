@@ -1,6 +1,6 @@
 package abstract_factory;
 
-public class ClientsMsql implements MysqlDatabase {
+public class ClientsMsql implements DatabaseInterface {
 
 	@Override
 	public String connectTo() {

@@ -1,7 +1,7 @@
 package abstract_factory;
 
 public abstract class DatabaseFactory {
-	abstract MysqlDatabase getMysql();
+	
+	abstract DatabaseInterface getConnection(String type);
 
-	abstract MongoDBDatabase getMongoDB();
 }
