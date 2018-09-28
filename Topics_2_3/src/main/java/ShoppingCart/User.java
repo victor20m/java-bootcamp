@@ -1,5 +1,11 @@
 package ShoppingCart;
 
+/**
+ * This class contains the properties and the constructor for each user
+ * 
+ * @author Victor Munareto
+ *
+ */
 public class User {
 
 	private String name;
@@ -8,12 +14,21 @@ public class User {
 	private String telephone;
 	private String email;
 
-	public User(String name,String password, String document, String telephone, String emai) {
+	/**
+	 * 
+	 * @param name
+	 * @param password
+	 * @param document
+	 * @param telephone
+	 * @param email
+	 */
+	public User(String name, String password, String document, String telephone, String email) {
 
 		this.name = name;
+		this.password = password;
 		this.document = document;
 		this.telephone = telephone;
-		this.email = emai;
+		this.email = email;
 	}
 
 	public String getName() {
@@ -58,7 +73,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", document=" + document + ", telephone=" + telephone + ", email=" + email + "]";
+		return "User name: " + this.getName() + ", document: " + this.getDocument() + ", telephone: "
+				+ this.getTelephone() + ", email: " + this.getEmail();
 	}
 
 	@Override
@@ -68,6 +84,7 @@ public class User {
 		result = prime * result + ((document == null) ? 0 : document.hashCode());
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((telephone == null) ? 0 : telephone.hashCode());
 		return result;
 	}
@@ -95,6 +112,11 @@ public class User {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
+			return false;
+		if (password == null) {
+			if (other.password != null)
+				return false;
+		} else if (!password.equals(other.password))
 			return false;
 		if (telephone == null) {
 			if (other.telephone != null)

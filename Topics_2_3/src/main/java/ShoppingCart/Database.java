@@ -2,11 +2,21 @@ package ShoppingCart;
 
 import java.util.ArrayList;
 
+/**
+ * Mock database class. Contains the list of products and users.
+ * 
+ * @author Victor Munareto
+ *
+ */
 public class Database {
-	/* Contains the list of all products */
+
 	ArrayList<Product> productList;
 	ArrayList<User> userDatabase;
 
+	/**
+	 * This constructor initializes the database's lists and fills the product list
+	 * with three kind of products.
+	 */
 	public Database() {
 		userDatabase = new ArrayList<User>();
 		productList = new ArrayList<Product>();

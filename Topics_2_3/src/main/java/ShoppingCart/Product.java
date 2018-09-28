@@ -1,5 +1,11 @@
 package ShoppingCart;
 
+/**
+ * Constains the properties of all products.
+ * 
+ * @author Victor Munareto
+ *
+ */
 public class Product {
 
 	private String name;
@@ -8,6 +14,14 @@ public class Product {
 	private int price;
 	private int desiredQuantity;
 
+	/**
+	 * Constructor for every product.
+	 * 
+	 * @param name
+	 * @param category
+	 * @param availableQuantity
+	 * @param price
+	 */
 	public Product(String name, String category, int availableQuantity, int price) {
 		this.name = name;
 		this.category = category;
@@ -54,8 +68,7 @@ public class Product {
 	public void setDesiredQuantity(int desiredQuantity) {
 		this.desiredQuantity = desiredQuantity;
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", category=" + category + ", price=" + price + ", desiredQuantity="
