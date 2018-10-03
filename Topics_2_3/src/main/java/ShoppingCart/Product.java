@@ -17,10 +17,10 @@ public class Product {
 	/**
 	 * Constructor for every product.
 	 * 
-	 * @param name Name of the product
-	 * @param category Category of the product
+	 * @param name              Name of the product
+	 * @param category          Category of the product
 	 * @param availableQuantity Available Quantity in the database
-	 * @param price	Price of every product
+	 * @param price             Price of every product
 	 */
 	public Product(String name, String category, int availableQuantity, int price) {
 		this.name = name;
