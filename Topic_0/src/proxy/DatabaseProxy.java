@@ -9,7 +9,6 @@ public class DatabaseProxy implements DataRequest {
 	 * When a DatabaseProxy instance is created, it receives the user making the
 	 * requests
 	 */
-
 	public DatabaseProxy(User userRequesting) {
 		mysqlDatabase = new Database();
 		registeredUser = userRequesting;
@@ -19,7 +18,6 @@ public class DatabaseProxy implements DataRequest {
 	 * The following database accesors grant limited access to users with no admin
 	 * permissions. Again, strings are used to simplify the example.
 	 */
-
 	@Override
 	public String showData(String request) {
 
