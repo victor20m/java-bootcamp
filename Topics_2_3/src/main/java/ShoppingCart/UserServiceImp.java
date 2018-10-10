@@ -21,7 +21,7 @@ public class UserServiceImp implements UserService {
 	}
 
 	/**
-	 * This method registers a new user to the database with the given information.
+	 * This method returns a new user for a database with the given information.
 	 * 
 	 * @param name
 	 * @param password
@@ -30,10 +30,9 @@ public class UserServiceImp implements UserService {
 	 * @param email
 	 */
 	@Override
-	public String registerUser(String name, String password, String document, String telephone, String email) {
+	public User registerUser(String name, String password, String document, String telephone, String email) {
 
-		databaseConnection.userDatabase.add(new User(name, password, document, telephone, email));
-		return "User added succesfully";
+		return new User(name, password, document, telephone, email);
 	}
 
 	/**
@@ -43,7 +42,7 @@ public class UserServiceImp implements UserService {
 	 * @param userDocument
 	 */
 	@Override
-	public String showUserData(String userDocument) {
+	public String showUserData(String userDocument, Database databaseConnection) {
 		String userInfo = "User doesn't exist";
 		for (User user : databaseConnection.userDatabase) {
 			if (user.getDocument().equalsIgnoreCase(userDocument)) {
@@ -62,7 +61,7 @@ public class UserServiceImp implements UserService {
 	 * @param newEmail
 	 */
 	@Override
-	public void updateInfo(String userName, String password, String newTelephone, String newEmail) {
+	public void updateInfo(Database databaseConnection, String userName, String password, String newTelephone, String newEmail) {
 		for (User user : databaseConnection.userDatabase) {
 			if (user.getName().equalsIgnoreCase(userName) && user.getPassword().equals(password)) {
 				user.setEmail(newEmail);
@@ -78,12 +77,11 @@ public class UserServiceImp implements UserService {
 	 * @param password
 	 */
 	@Override
-	public void deleteUser(String userName, String password) {
+	public void deleteUser(Database databaseConnection, String userName, String password) {
 		for (User user : databaseConnection.userDatabase) {
 			if (user.getName().equals(userName) && user.getPassword().equals(password)) {
 				databaseConnection.userDatabase.remove(user);
 			}
 		}
-
 	}
 }

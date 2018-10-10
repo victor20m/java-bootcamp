@@ -10,7 +10,7 @@ public class DatabaseConnection {
 					"java", "123");
 			Statement stat = dtbCon.createStatement();
 			ResultSet myRes = stat
-					.executeQuery("SELECT CONCAT(t.last_name_teacher, \", \", t.first_name_teacher) as Teacher,\r\n"
+					.executeQuery("SELECT CONCAT(t.last_name_teacher, \", \", t.first_name_teacher) as Teacher, "
 							+ "CONCAT(c.Schedule_time, \" \", c.course_name) as Schedule\r\n"
 							+ "FROM Course as c, teacher as t\r\n" + "WHERE t.idTeachers = 3\r\n"
 							+ "GROUP BY teacher\r\n" + "ORDER BY c.Schedule_time ASC;");
